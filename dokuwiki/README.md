@@ -1,4 +1,4 @@
-DokuWiki docker container
+DokuWiki Docker Container [![](https://images.microbadger.com/badges/image/fixl/docker-dokuwiki.svg)](http://microbadger.com/images/fixl/docker-dokuwiki "Get your own image badge on microbadger.com")
 =========================
 
 
