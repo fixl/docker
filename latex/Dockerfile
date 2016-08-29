@@ -4,7 +4,7 @@ MAINTAINER Stefan Fuchs
 
 RUN apt-get update && \
     apt-get -y dist-upgrade && \
-    apt-get install -y
+    apt-get install -y \
         texlive-latex-base \
     && \
     apt-get clean autoclean && \
