@@ -1,4 +1,4 @@
-FROM debian:jessie
+FROM debian:testing
 
 MAINTAINER Stefan Fuchs
 
