@@ -21,16 +21,9 @@ RUN cd /tmp && \
     mv hugo /usr/local/bin && \
     rm -rf /tmp/*
 
-# Install solarized pygments
-RUN cd /tmp && \
-    curl -L -o master.zip https://github.com/john2x/solarized-pygment/archive/master.zip && \
-    unzip master.zip && \
-    cd solarized-pygment-master && \
-    ./setup.py install && \
-    rm -rf /tmp/*
+COPY ./run.sh /run.sh
 
 WORKDIR /hugo
+CMD ["/run.sh"]
 
 EXPOSE 1313
-
-CMD ["hugo", "serve", "--bind", "0.0.0.0", "--disableLiveReload"]
