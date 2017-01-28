@@ -1,11 +1,12 @@
-FROM debian:jessie
+FROM debian:stretch
 
 MAINTAINER Stefan Fuchs
 
 RUN apt-get update && \
     apt-get -y dist-upgrade && \
-    apt-get -y install apt-transport-https ca-certificates && \
-    apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
+    apt-get -y install apt-transport-https ca-certificates software-properties-common curl gnupg && \
+    curl -fsSL https://yum.dockerproject.org/gpg | apt-key add - && \
+    apt-key fingerprint 58118E89F3A912897C070ADBF76221572C52609D
 
 COPY docker.list /etc/apt/sources.list.d/docker.list
 
