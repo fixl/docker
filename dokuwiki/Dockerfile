@@ -2,8 +2,8 @@ FROM debian:jessie
 MAINTAINER Stefan Fuchs
 
 # Set the version you want of Twiki
-ENV DOKUWIKI_VERSION 2016-06-26a
-ENV DOKUWIKI_CSUM 9b9ad79421a1bdad9c133e859140f3f2
+ENV DOKUWIKI_VERSION 2017-02-19a
+ENV DOKUWIKI_CSUM 78e8c27291fbc3de04c7f107c3f7725a
 
 # Update & install packages & cleanup afterwards
 RUN apt-get update && \
