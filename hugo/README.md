@@ -20,7 +20,7 @@ ADD your/site /hugo
 
 Build your new image
 ```
-docker build --tag ${USER}/my-hugo-website
+docker build --tag ${USER}/my-hugo-website .
 ```
 
 Run your new image
