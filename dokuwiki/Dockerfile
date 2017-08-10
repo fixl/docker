@@ -1,6 +1,8 @@
 FROM debian:jessie
 MAINTAINER Stefan Fuchs
 
+ENV DEBIAN_FRONTEND noninteractive
+
 # Set the version you want of Twiki
 ENV DOKUWIKI_VERSION 2017-02-19b
 ENV DOKUWIKI_CSUM ea11e4046319710a2bc6fdf58b5cda86
@@ -23,14 +25,14 @@ RUN wget -q -O /dokuwiki.tgz "http://download.dokuwiki.org/src/dokuwiki/dokuwiki
     cd /dokuwiki/lib/plugins && \
     wget -q https://github.com/Andreone/dokuwiki_plantuml/archive/master.zip && unzip master.zip && mv dokuwiki_plantuml-master plantuml && rm master.zip && \
     mkdir plantuml/local && wget -O plantuml/local/plantuml.jar -q https://sourceforge.net/projects/plantuml/files/plantuml.jar && \
-    ls -la && \
     wget -q https://github.com/samuelet/indexmenu/archive/master.zip && unzip master.zip && mv indexmenu-master/ indexmenu && rm master.zip && \
     wget -q https://github.com/samwilson/dokuwiki-plugin-addnewpage/archive/master.zip && unzip master.zip && mv dokuwiki-plugin-addnewpage-master addnewpage && rm master.zip && \
     wget -q https://github.com/cosmocode/edittable/archive/master.zip && unzip master.zip && mv edittable-master/ edittable && rm master.zip && \
     wget -q https://github.com/leibler/dokuwiki-plugin-todo/archive/master.zip && unzip master.zip && mv dokuwiki-plugin-todo-master/ todo && rm master.zip && \
     wget -q https://github.com/jdehaan/dokuwiki-plugin-bpmnio/archive/master.zip && unzip master.zip &&  mv dokuwiki-plugin-bpmnio-master bpmnio && rm master.zip && \
     wget -q https://github.com/michitux/dokuwiki-plugin-move/archive/master.zip && unzip master.zip && mv dokuwiki-plugin-move-master/ move && rm master.zip && \
-    wget -q https://github.com/littleiffel/dokuwiki-slack-integration/archive/master.zip && unzip master.zip && mv dokuwiki-slack-integration-master slacknotifier && rm master.zip
+    wget -q https://github.com/littleiffel/dokuwiki-slack-integration/archive/master.zip && unzip master.zip && mv dokuwiki-slack-integration-master slacknotifier && rm master.zip && \
+    wget -q https://github.com/tillbiskup/dokuwiki-caption/archive/master.zip && unzip master.zip && mv dokuwiki-caption-master/ caption && rm master.zip
 
 
 # Configure plantuml for local rendering

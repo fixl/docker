@@ -69,6 +69,7 @@ Additional Plugins
 * bpmnio
 * move
 * slacknotifier
+* caption
 
 Build your own
 --------------
