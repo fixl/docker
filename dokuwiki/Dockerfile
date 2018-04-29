@@ -3,9 +3,9 @@ MAINTAINER Stefan Fuchs
 
 ENV DEBIAN_FRONTEND noninteractive
 
-# Set the version you want of Twiki
-ENV DOKUWIKI_VERSION 2017-02-19e
-ENV DOKUWIKI_CSUM 09bf175f28d6e7ff2c2e3be60be8c65f
+# Set the version you want of Dokuwiki
+ENV DOKUWIKI_VERSION 2018-04-22
+ENV DOKUWIKI_CSUM cec26670452f0122807d4f812432df4d
 
 # Update & install packages & cleanup afterwards
 RUN apt-get update && \
