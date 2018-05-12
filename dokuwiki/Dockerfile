@@ -4,8 +4,8 @@ MAINTAINER Stefan Fuchs
 ENV DEBIAN_FRONTEND noninteractive
 
 # Set the version you want of Dokuwiki
-ENV DOKUWIKI_VERSION 2018-04-22
-ENV DOKUWIKI_CSUM cec26670452f0122807d4f812432df4d
+ENV DOKUWIKI_VERSION 2018-04-22a
+ENV DOKUWIKI_CSUM 18765a29508f96f9882349a304bffc03
 
 # Update & install packages & cleanup afterwards
 RUN apt-get update && \
